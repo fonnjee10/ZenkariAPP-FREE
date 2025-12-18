@@ -3653,41 +3653,87 @@
                 chat.appendChild(div);
                 chat.scrollTop = chat.scrollHeight;
             }
-            async function sendMessage() {
-                const text = input.value.trim();
-                if (!text) return;
-                addMessage(text, 'user');
-                input.value = '';
-                document.getElementById('typingPreview').style.display = 'none';
-                tecuitThinking.style.display = 'block';
-                chat.scrollTop = chat.scrollHeight;
-                try {
-                    const res = await fetch('/api/chat', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            model: 'nousresearch/nous-hermes-2-mistral-7b-dpo',
-                            messages: [{ role: 'user', content: text }]
-                        })
-                    });
-                    const data = await res.json();
-                    const reply = data.choices?.[0]?.message?.content || 'Pas de réponse';
-                    tecuitThinking.style.display = 'none';
-                    addMessage(reply, 'tecuit');
-                    addSystemLog('chat_message', {
-                        user: currentUser.username,
-                        message: text,
-                        response: reply
-                    });
-                } catch (err) {
-                    tecuitThinking.style.display = 'none';
-                    addMessage('Connection error : ' + err.message, 'tecuit');
-                    addSystemLog('chat_error', {
-                        user: currentUser.username,
-                        error: err.message
-                    });
+  async function sendMessage() {
+    const text = input.value.trim();
+    if (!text) return;
+
+    addMessage(text, 'user');
+    input.value = '';
+    document.getElementById('typingPreview').style.display = 'none';
+    tecuitThinking.style.display = 'block';
+    chat.scrollTop = chat.scrollHeight;
+
+    try {
+        const res = await fetch('/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                model: 'nousresearch/nous-hermes-2-mistral-7b-dpo',
+                messages: [{ role: 'user', content: text }],
+                stream: true // On demande à LM Studio de streamer
+            })
+        });
+
+        if (!res.ok) throw new Error("Erreur de connexion au serveur");
+
+        // --- NOUVELLE LOGIQUE DE LECTURE DU STREAM ---
+        tecuitThinking.style.display = 'none';
+        
+        // On crée une bulle de message vide pour Tecuit qu'on va remplir
+        const messageId = addMessage('', 'tecuit'); 
+        const messageElement = document.getElementById(messageId); 
+        // Note: Si ta fonction addMessage ne retourne pas d'ID, 
+        // on peut cibler le dernier élément '.msg.tecuit'
+        const tecuitDiv = document.querySelector('.msg.tecuit:last-child');
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let fullReply = "";
+
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+
+            const chunk = decoder.decode(value, { stream: true });
+            const lines = chunk.split("\n");
+
+            for (const line of lines) {
+                if (line.startsWith("data: ")) {
+                    const dataStr = line.replace("data: ", "").trim();
+                    if (dataStr === "[DONE]") break;
+
+                    try {
+                        const json = JSON.parse(dataStr);
+                        const content = json.choices[0].delta?.content || "";
+                        fullReply += content;
+                        
+                        // Mise à jour en temps réel dans la bulle
+                        if (tecuitDiv) {
+                            tecuitDiv.innerText = fullReply;
+                        }
+                        chat.scrollTop = chat.scrollHeight;
+                    } catch (e) {
+                        // On ignore les erreurs sur les morceaux de JSON coupés
+                    }
                 }
             }
+        }
+
+        addSystemLog('chat_message', {
+            user: currentUser.username,
+            message: text,
+            response: fullReply
+        });
+
+    } catch (err) {
+        tecuitThinking.style.display = 'none';
+        addMessage('Connection error : ' + err.message, 'tecuit');
+        addSystemLog('chat_error', {
+            user: currentUser.username,
+            error: err.message
+        });
+    }
+}
             sendBtn.addEventListener('click', sendMessage);
             fileUploadBtn.addEventListener('click', () => {
                 document.getElementById('fileInput').click();

@@ -1,3 +1,5 @@
+import { Readable } from 'stream';
+
 export default async function handler(req, res) {
     try {
         const response = await fetch(
@@ -5,42 +7,41 @@ export default async function handler(req, res) {
             {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(req.body)
+                body: JSON.stringify({ ...req.body, stream: true })
             }
         );
 
-        const text = await response.text();
-        let data;
-
-        // Essayer de parser correctement la réponse
-        try {
-            data = JSON.parse(text);
-        } catch (e) {
-            // Si pas du JSON → renvoyer proprement au frontend
-            return res.status(200).json({
-                choices: [
-                    {
-                        message: {
-                            content: "⚠️ Réponse non-JSON de LM Studio / Ngrok :\n\n" + text
-                        }
-                    }
-                ]
-            });
+        // Si Ngrok ou LM Studio renvoie une erreur direct
+        if (!response.ok) {
+            const errorText = await response.text();
+            return res.status(response.status).json({ error: errorText });
         }
 
-        // Si JSON valide → renvoyer normalement
-        return res.status(200).json(data);
+        // Headers essentiels pour que le navigateur ne coupe pas la connexion
+        res.setHeader('Content-Type', 'text/event-stream');
+        res.setHeader('Cache-Control', 'no-cache, no-transform');
+        res.setHeader('Connection', 'keep-alive');
+        res.setHeader('Content-Encoding', 'none');
+
+        // On transforme la réponse en flux lisible pour Node.js
+        const reader = Readable.fromWeb(response.body);
+
+        // On envoie chaque morceau dès qu'il arrive
+        reader.on('data', (chunk) => {
+            res.write(chunk);
+        });
+
+        reader.on('end', () => {
+            res.end();
+        });
+
+        reader.on('error', (e) => {
+            console.error("Erreur de flux:", e);
+            res.end();
+        });
 
     } catch (err) {
-        // Catch global (erreur réseau, crash LM Studio, etc)
-        return res.status(500).json({
-            choices: [
-                {
-                    message: {
-                        content: "⚠️ Erreur serveur : " + err.message
-                    }
-                }
-            ]
-        });
+        console.error("Erreur serveur proxy:", err);
+        res.status(500).json({ error: err.message });
     }
 }

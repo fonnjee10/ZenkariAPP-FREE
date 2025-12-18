@@ -3653,15 +3653,15 @@
                 chat.appendChild(div);
                 chat.scrollTop = chat.scrollHeight;
             }
-  async function sendMessage() {
-    const text = input.value.trim();
-    if (!text) return;
+              async function sendMessage() {
+                 const text = input.value.trim();
+                    if (!text) return;
 
-    addMessage(text, 'user');
-    input.value = '';
-    document.getElementById('typingPreview').style.display = 'none';
-    tecuitThinking.style.display = 'block';
-    chat.scrollTop = chat.scrollHeight;
+                    addMessage(text, 'user');
+                    input.value = '';
+                    document.getElementById('typingPreview').style.display = 'none';
+                    tecuitThinking.style.display = 'block';
+                    chat.scrollTop = chat.scrollHeight;
 
     try {
         const res = await fetch('/api/chat', {

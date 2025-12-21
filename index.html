@@ -3135,10 +3135,7 @@
                     signature: signature,
                     timestamp: new Date().toISOString(),
                     ...additionalData
-                };    
-                const nonce = CryptoJS.enc.Base64.stringify(
-                CryptoJS.lib.WordArray.create(nonceArray)
-                );
+                };
                 const finalMessage = btoa(JSON.stringify(messageObj));
                 document.getElementById('outputMessage').value = finalMessage;
                 const securityInfo = useSecurityKey ? '\nProtection : Clé de sécurité activée' : '';

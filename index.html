@@ -3044,7 +3044,7 @@
             }
         }
         function generateKeypair() {
-            const crypt = new JSEncrypt({default_key_size: 2048});
+            const crypt = new JSEncrypt({default_key_size: 3072});
             return {
                 private: crypt.getPrivateKey(),
                 public: crypt.getPublicKey()

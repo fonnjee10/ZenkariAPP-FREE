@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>ZenkariApp 9.6.1 Free - Messagerie Sécurisée</title>
+    <title>ZenkariApp 9.6.2 Free - Messagerie Sécurisée</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%233b82f6;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='45' fill='url(%23grad)'/%3E%3Cpath d='M30 50 L45 35 L70 60 M45 35 L45 65' stroke='white' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='70' cy='30' r='8' fill='%2310b981'/%3E%3C/svg%3E">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.3.2/jsencrypt.min.js"></script>
@@ -950,7 +950,7 @@
                 </div>
                 <div class="feature-card">
                     <h3 id="feature-encryption">🔐 Chiffrement Hybride</h3>
-                    <p id="feature-encryption-desc">Utilisation de RSA-2048 pour l'échange de clés et AES-256 pour le chiffrement des messages. Double clé par utilisateur.</p>
+                    <p id="feature-encryption-desc">Utilisation de RSA-3072 pour l'échange de clés et AES-256 pour le chiffrement des messages. Double clé par utilisateur.</p>
                 </div>
                 <div class="feature-card">
                     <h3 id="feature-key-management">🔑 Gestion des Clés</h3>
@@ -978,7 +978,7 @@
             <h2 id="security-title">🔒 Détails de Sécurité</h2>
             <ul style="list-style: none; padding: 0;">
                 <li style="padding: 15px; margin-bottom: 10px; background: #2d2d2d; border-radius: 8px; border-left: 4px solid #10b981; transition: all 0.3s;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                    <strong>✓ Chiffrement RSA-2048 :</strong> <span id="security-rsa">Échange sécurisé de clés symétriques</span>
+                    <strong>✓ Chiffrement RSA-3072 :</strong> <span id="security-rsa">Échange sécurisé de clés symétriques</span>
                 </li>
                 <li style="padding: 15px; margin-bottom: 10px; background: #2d2d2d; border-radius: 8px; border-left: 4px solid #10b981; transition: all 0.3s;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
                     <strong>✓ AES-256 :</strong> <span id="security-aes">Chiffrement militaire des messages</span>
@@ -1035,7 +1035,7 @@
                         </svg>
                     </div>
                     <h1 id="app-title" style="color: #3b82f6; font-size: 22px; margin-bottom: 8px;">Zenkari Secure</h1>
-                    <p id="app-subtitle" style="color: #10b981; font-size: 12px;">Messagerie chiffrée de bout en bout<br>RSA-2048 + AES-256</p>
+                    <p id="app-subtitle" style="color: #10b981; font-size: 12px;">Messagerie chiffrée de bout en bout<br>RSA-3072 + AES-256</p>
                 </div>
                 <h2 id="auth-mode" style="color: white; margin-bottom: 15px; text-align: center;">Connexion</h2>
                 <label id="label-username">Nom d'utilisateur</label>
@@ -1196,7 +1196,7 @@
             </svg>
         </div>
         <p id="footer-copyright" style="margin-bottom: 8px;">© 2026 ZenkariApp Free - Tous droits réservés</p>
-        <p id="footer-version" style="font-size: 11px;">Version 9.6.1F - Made by LE$TER</p>
+        <p id="footer-version" style="font-size: 11px;">Version 9.6.2F - Made by LE$TER</p>
     </footer>
     <!-- Modals -->
     <div id="addContactModal" class="modal">
@@ -1304,7 +1304,7 @@
                 "feature-ai": "Encrypted AI with logs",
                 "feature-ai-desc": "Provides an unfiltered generative AI (still in development and may make mistakes).",
                 "feature-encryption": "🔐 Hybrid Encryption",
-                "feature-encryption-desc": "Use of RSA-2048 for key exchange and AES-256 for message encryption. Dual key per user.",
+                "feature-encryption-desc": "Use of RSA-3072 for key exchange and AES-256 for message encryption. Dual key per user.",
                 "feature-key-management": "🔑 Key Management",
                 "feature-key-management-desc": "Local generation of cryptographic keys. Private keys never leave your device.",
                 "feature-qr": "Secure QR Codes",
@@ -1328,7 +1328,7 @@
                 "logs-encryption": "AES-256 Encryption",
                 "logs-backup": "Save the site on the browser for automatic backup",
                 "app-title": "Zenkari Secure",
-                "app-subtitle": "End-to-end encrypted messaging RSA-4096 + AES-256",
+                "app-subtitle": "End-to-end encrypted messaging RSA-3072 + AES-256",
                 "auth-mode": "Login",
                 "label-username": "Username",
                 "label-password": "Password",
@@ -1363,7 +1363,7 @@
                 "logout-btn": " Logout",
                 "contact-title": "✉ Contact / Help",
                 "footer-copyright": "© 2026 ZenkariApp Free - All rights reserved",
-                "footer-version": "Version 9.6.1F - Made by LE$TER",
+                "footer-version": "Version 9.6.2F - Made by LE$TER",
                 "label-contact-name": "Contact name:",
                 "scan-qr-btn": "📷 Scan QR",
                 "switch-camera-btn": "🔄 Switch Camera",
@@ -1402,7 +1402,7 @@
                 "feature-ai": "IA Chiffrée avec logs",
                 "feature-ai-desc": "Mise à disposition d'une IA générative sans filtre (toujours en développement, peut faire des erreurs).",
                 "feature-encryption": "🔐 Chiffrement Hybride",
-                "feature-encryption-desc": "Utilisation de RSA-2048 pour l'échange de clés et AES-256 pour le chiffrement des messages. Double clé par utilisateur.",
+                "feature-encryption-desc": "Utilisation de RSA-3072 pour l'échange de clés et AES-256 pour le chiffrement des messages. Double clé par utilisateur.",
                 "feature-key-management": "🔑 Gestion des Clés",
                 "feature-key-management-desc": "Génération locale des clés cryptographiques. Les clés privées ne quittent jamais votre appareil.",
                 "feature-qr": "QR Codes Sécurisés",
@@ -1426,7 +1426,7 @@
                 "logs-encryption": "Chiffrement AES-256",
                 "logs-backup": "Sauvegardé dans le navigateur pour un Backup Automatique",
                 "app-title": "Zenkari Secure",
-                "app-subtitle": "Messagerie chiffrée de bout en bout RSA-2048 + AES-256",
+                "app-subtitle": "Messagerie chiffrée de bout en bout RSA-3072 + AES-256",
                 "auth-mode": "Connexion",
                 "label-username": "Nom d'utilisateur",
                 "label-password": "Mot de passe",
@@ -1461,7 +1461,7 @@
                 "logout-btn": " Déconnexion",
                 "contact-title": "✉ Contact / Aide",
                 "footer-copyright": "© 2026 ZenkariApp Free - Tous droits réservés",
-                "footer-version": "Version 9.6.1F - Made by LE$TER",
+                "footer-version": "Version 9.6.2F - Made by LE$TER",
                 "label-contact-name": "Nom du contact:",
                 "scan-qr-btn": "📷 Scanner QR",
                 "switch-camera-btn": "🔄 Changer caméra",
@@ -1500,7 +1500,7 @@
                 "feature-ai": "IA Cifrada con registros",
                 "feature-ai-desc": "Proporciona una IA generativa sin filtros (aún en desarrollo y puede cometer errores).",
                 "feature-encryption": "🔐 Cifrado Híbrido",
-                "feature-encryption-desc": "Uso de RSA-2048 para el intercambio de claves y AES-256 para el cifrado de mensajes. Doble clave por usuario.",
+                "feature-encryption-desc": "Uso de RSA-3072 para el intercambio de claves y AES-256 para el cifrado de mensajes. Doble clave por usuario.",
                 "feature-key-management": "🔑 Gestión de Claves",
                 "feature-key-management-desc": "Generación local de claves criptográficas. Las claves privadas nunca salen de su dispositivo.",
                 "feature-qr": "Códigos QR Seguros",
@@ -1524,7 +1524,7 @@
                 "logs-encryption": "Cifrado AES-256",
                 "logs-backup": "Guardar el sitio en el navegador para copia de seguridad automática",
                 "app-title": "Zenkari Secure",
-                "app-subtitle": "Mensajería cifrada de extremo a extremo RSA-2048 + AES-256",
+                "app-subtitle": "Mensajería cifrada de extremo a extremo RSA-3072 + AES-256",
                 "auth-mode": "Inicio de sesión",
                 "label-username": "Nombre de usuario",
                 "label-password": "Contraseña",
@@ -1559,7 +1559,7 @@
                 "logout-btn": "Cerrar sesión",
                 "contact-title": "✉ Contacto / Ayuda",
                 "footer-copyright": "© 2026 ZenkariApp Free - Todos los derechos reservados",
-                "footer-version": "Versión 9.6.1F - Hecho por LE$TER",
+                "footer-version": "Versión 9.6.2F - Hecho por LE$TER",
                 "label-contact-name": "Nombre del contacto:",
                 "scan-qr-btn": "📷 Escanear QR",
                 "switch-camera-btn": "🔄 Cambiar cámara",
@@ -1598,7 +1598,7 @@
                 "feature-ai": "带日志的加密AI",
                 "feature--ai-desc": "提供未经过滤的生成式人工智能（仍在开发中，可能会出现错误）。",
                 "feature-encryption": "🔐 混合加密",
-                "feature-encryption-desc": "使用RSA-2048进行密钥交换，AES-256进行消息加密。每个用户双密钥。",
+                "feature-encryption-desc": "使用RSA-3072进行密钥交换，AES-256进行消息加密。每个用户双密钥。",
                 "feature-key-management": "🔑 密钥管理",
                 "feature-key-management-desc": "本地生成加密密钥。私钥永不离开您的设备。",
                 "feature-qr": "安全二维码",
@@ -1622,7 +1622,7 @@
                 "logs-encryption": "AES-256加密",
                 "logs-backup": "在浏览器中保存网站以进行自动备份",
                 "app-title": "Zenkari Secure",
-                "app-subtitle": "端到端加密消息 RSA-2048 + AES-256",
+                "app-subtitle": "端到端加密消息 RSA-3072 + AES-256",
                 "auth-mode": "登录",
                 "label-username": "用户名",
                 "label-password": "密码",
@@ -1657,7 +1657,7 @@
                 "logout-btn": " 注销",
                 "contact-title": "✉ 联系/帮助",
                 "footer-copyright": "© 2026 ZenkariApp Free - 保留所有权利",
-                "footer-version": "版本 9.6.1F - 由 LE$TER 制作",
+                "footer-version": "版本 9.6.2F - 由 LE$TER 制作",
                 "label-contact-name": "联系人姓名：",
                 "scan-qr-btn": "📷 扫描二维码",
                 "switch-camera-btn": "🔄 切换摄像头",
@@ -1696,7 +1696,7 @@
                 "feature-ai": "लॉग के साथ एन्क्रिप्टेड एआई",
                 "feature-ai-desc": "बिना फ़िल्टर की जनरेटिव एआई उपलब्ध कराता है (अभी विकास में है और गलतियाँ कर सकता है)।",
                 "feature-encryption": "🔐 हाइब्रिड एन्क्रिप्शन",
-                "feature-encryption-desc": "कुंजी विनिमय के लिए आरएसए-2048 और संदेश एन्क्रिप्शन के लिए एईएस-256 का उपयोग। प्रति उपयोक्ता दोहरी कुंजी।",
+                "feature-encryption-desc": "कुंजी विनिमय के लिए आरएसए-3072 और संदेश एन्क्रिप्शन के लिए एईएस-256 का उपयोग। प्रति उपयोक्ता दोहरी कुंजी।",
                 "feature-key-management": "🔑 कुंजी प्रबंधन",
                 "feature-key-management-desc": "क्रिप्टोग्राफ़िक कुंजियों का स्थानीय उत्पादन। निजी कुंजियाँ कभी भी आपके डिवाइस को नहीं छोड़ती हैं।",
                 "feature-qr": "सुरक्षित क्यूआर कोड",
@@ -1720,7 +1720,7 @@
                 "logs-encryption": "एईएस-256 एन्क्रिप्शन",
                 "logs-backup": "स्वचालित बैकअप के लिए ब्राउज़र में साइट सहेजें",
                 "app-title": "ज़ेनकारी सिक्योर",
-                "app-subtitle": "एंड-टू-एंड एन्क्रिप्टेड मैसेजिंग आरएसए-2048 + एईएस-256",
+                "app-subtitle": "एंड-टू-एंड एन्क्रिप्टेड मैसेजिंग आरएसए-3072 + एईएस-256",
                 "auth-mode": "लॉग इन",
                 "label-username": "उपयोगकर्ता नाम",
                 "label-password": "पासवर्ड",
@@ -1755,7 +1755,7 @@
                 "logout-btn": " लॉग आउट",
                 "contact-title": "✉ संपर्क / सहायता",
                 "footer-copyright": "© 2026 ज़ेनकारीऐप - सर्वाधिकार सुरक्षित",
-                "footer-version": "संस्करण 9.6.1F - एलई$टीईआर द्वारा निर्मित",
+                "footer-version": "संस्करण 9.6.2F - एलई$टीईआर द्वारा निर्मित",
                 "label-contact-name": "संपर्क नाम:",
                 "scan-qr-btn": "📷 क्यूआर स्कैन करें",
                 "switch-camera-btn": "🔄 कैमरा बदलें",
@@ -1794,7 +1794,7 @@
                 "feature-ai": "ذكاء اصطناعي مشفر مع سجلات",
                 "feature-ai-desc": "يوفر ذكاءً اصطناعياً توليدياً بدون أي فلاتر (ما زال قيد التطوير وقد يرتكب أخطاء).",
                 "feature-encryption": "🔐 التشفير الهجين",
-                "feature-encryption-desc": "استخدام RSA-2048 لتبادل المفاتيح وAES-256 لتشفير الرسائل. مفتاحان لكل مستخدم.",
+                "feature-encryption-desc": "استخدام RSA-3072 لتبادل المفاتيح وAES-256 لتشفير الرسائل. مفتاحان لكل مستخدم.",
                 "feature-key-management": "🔑 إدارة المفاتيح",
                 "feature-key-management-desc": "توليد محلي للمفاتيح التشفيرية. لا تغادر المفاتيح الخاصة جهازك أبدًا.",
                 "feature-qr": "رموز استجابة سريعة آمنة",
@@ -1818,7 +1818,7 @@
                 "logs-encryption": "تشفير AES-256",
                 "logs-backup": "احفظ الموقع على المتصفح للنسخ الاحتياطي التلقائي",
                 "app-title": "زينكاري سكيور",
-                "app-subtitle": "مراسلة مشفرة من طرف إلى طرف RSA-2048 + AES-256",
+                "app-subtitle": "مراسلة مشفرة من طرف إلى طرف RSA-3072 + AES-256",
                 "auth-mode": "تسجيل الدخول",
                 "label-username": "اسم المستخدم",
                 "label-password": "كلمة المرور",
@@ -1853,7 +1853,7 @@
                 "logout-btn": " تسجيل الخروج",
                 "contact-title": "✉ الاتصال / المساعدة",
                 "footer-copyright": "© 2026 ZenkariApp - جميع الحقوق محفوظة",
-                "footer-version": "الإصدار F9.6.1 - صنع بواسطة LE$TER",
+                "footer-version": "الإصدار F9.6.2 - صنع بواسطة LE$TER",
                 "label-contact-name": "اسم جهة الاتصال:",
                 "scan-qr-btn": "📷 مسح الرمز",
                 "switch-camera-btn": "🔄 تغيير الكاميرا",
@@ -1892,7 +1892,7 @@
                 "feature-ai": "IA Criptografada com registros",
                 "feature-ai-desc": "Fornece uma IA generativa sem filtros (ainda em desenvolvimento e pode cometer erros).",
                 "feature-encryption": "🔐 Criptografia Híbrida",
-                "feature-encryption-desc": "Uso de RSA-2048 para troca de chaves e AES-256 para criptografia de mensagens. Chave dupla por usuário.",
+                "feature-encryption-desc": "Uso de RSA-3072 para troca de chaves e AES-256 para criptografia de mensagens. Chave dupla por usuário.",
                 "feature-key-management": "🔑 Gerenciamento de Chaves",
                 "feature-key-management-desc": "Geração local de chaves criptográficas. As chaves privadas nunca deixam seu dispositivo.",
                 "feature-qr": "Códigos QR Seguros",
@@ -1916,7 +1916,7 @@
                 "logs-encryption": "Criptografia AES-256",
                 "logs-backup": "Salvar o site no navegador para backup automático",
                 "app-title": "Zenkari Secure",
-                "app-subtitle": "Mensagens criptografadas de ponta a ponta RSA-2048 + AES-256",
+                "app-subtitle": "Mensagens criptografadas de ponta a ponta RSA-3072 + AES-256",
                 "auth-mode": "Login",
                 "label-username": "Nome de usuário",
                 "label-password": "Senha",
@@ -1951,7 +1951,7 @@
                 "logout-btn": " Sair",
                 "contact-title": "✉ Contato / Ajuda",
                 "footer-copyright": "© 2026 ZenkariApp Free - Todos os direitos reservados",
-                "footer-version": "Versão 9.6.1F - Feito por LE$TER",
+                "footer-version": "Versão 9.6.2F - Feito por LE$TER",
                 "label-contact-name": "Nome do contato:",
                 "scan-qr-btn": "📷 Escanear QR",
                 "switch-camera-btn": "🔄 Trocar câmera",
@@ -1990,7 +1990,7 @@
                 "feature-ai": "লগ সহ এনক্রিপ্টেড এআই",
                 "feature-ai-desc": "একটি অনফিল্টারড জেনারেটিভ এআই প্রদান করা হচ্ছে (এখনও উন্নয়নে রয়েছে এবং ভুল করতে পারে)।",
                 "feature-encryption": "🔐 হাইব্রিড এনক্রিপশন",
-                "feature-encryption-desc": "কী এক্সচেঞ্জের জন্য RSA-2048 এবং মেসেজ এনক্রিপশনের জন্য AES-256 ব্যবহার। প্রতি ব্যবহারকারীর জন্য ডুয়াল কী।",
+                "feature-encryption-desc": "কী এক্সচেঞ্জের জন্য RSA-3072 এবং মেসেজ এনক্রিপশনের জন্য AES-256 ব্যবহার। প্রতি ব্যবহারকারীর জন্য ডুয়াল কী।",
                 "feature-key-management": "🔑 কী ম্যানেজমেন্ট",
                 "feature-key-management-desc": "ক্রিপ্টোগ্রাফিক কীগুলির স্থানীয় জেনারেশন। ব্যক্তিগত কীগুলি কখনও আপনার ডিভাইস ছাড়ে না।",
                 "feature-qr": "নিরাপদ QR কোড",
@@ -2014,7 +2014,7 @@
                 "logs-encryption": "AES-256 এনক্রিপশন",
                 "logs-backup": "স্বয়ংক্রিয় ব্যাকআপের জন্য ব্রাউজারে সাইট সংরক্ষণ করুন",
                 "app-title": "জেনকারি সিকিউর",
-                "app-subtitle": "এন্ড-টু-এন্ড এনক্রিপ্টেড মেসেজিং RSA-2048 + AES-256",
+                "app-subtitle": "এন্ড-টু-এন্ড এনক্রিপ্টেড মেসেজিং RSA-3072 + AES-256",
                 "auth-mode": "লগইন",
                 "label-username": "ব্যবহারকারীর নাম",
                 "label-password": "পাসওয়ার্ড",
@@ -2049,7 +2049,7 @@
                 "logout-btn": " লগআউট",
                 "contact-title": "✉ যোগাযোগ / সহায়তা",
                 "footer-copyright": "© 2026 জেনকারিঅ্যাপ - সমস্ত অধিকার সংরক্ষিত",
-                "footer-version": "সংস্করণ 9.6.1F - LE$TER দ্বারা তৈরি",
+                "footer-version": "সংস্করণ 9.6.2F - LE$TER দ্বারা তৈরি",
                 "label-contact-name": "যোগাযোগের নাম:",
                 "scan-qr-btn": "📷 QR স্ক্যান করুন",
                 "switch-camera-btn": "🔄 ক্যামেরা পরিবর্তন করুন",
@@ -2088,7 +2088,7 @@
                 "feature-ai": "Зашифрованный ИИ с журналами",
                 "feature-ai-desc": "Предоставляет нефильтрованный генеративный ИИ (всё ещё в разработке и может допускать ошибки).",
                 "feature-encryption": "🔐 Гибридное шифрование",
-                "feature-encryption-desc": "Использование RSA-2048 для обмена ключами и AES-256 для шифрования сообщений. Двойной ключ на пользователя.",
+                "feature-encryption-desc": "Использование RSA-3072 для обмена ключами и AES-256 для шифрования сообщений. Двойной ключ на пользователя.",
                 "feature-key-management": "🔑 Управление ключами",
                 "feature-key-management-desc": "Локальная генерация кryptографических ключей. Закрытые ключи никогда не покидают ваше устройство.",
                 "feature-qr": "Безопасные QR-коды",
@@ -2112,7 +2112,7 @@
                 "logs-encryption": "Шифрование AES-256",
                 "logs-backup": "Сохраните сайт в браузере для автоматического резервного копирования",
                 "app-title": "Zenkari Secure",
-                "app-subtitle": "Сквозная зашифрованная переписка RSA-2048 + AES-256",
+                "app-subtitle": "Сквозная зашифрованная переписка RSA-3072 + AES-256",
                 "auth-mode": "Вход",
                 "label-username": "Имя пользователя",
                 "label-password": "Пароль",
@@ -2147,7 +2147,7 @@
                 "logout-btn": " Выйти",
                 "contact-title": "✉ Контакт / Помощь",
                 "footer-copyright": "© 2026 ZenkariApp - Все права защищены",
-                "footer-version": "Версия 9.6.1F - Сделано LE$TER",
+                "footer-version": "Версия 9.6.2F - Сделано LE$TER",
                 "label-contact-name": "Имя контакта:",
                 "scan-qr-btn": "📷 Сканировать QR",
                 "switch-camera-btn": "🔄 Сменить камеру",
@@ -2186,7 +2186,7 @@
                 "feature-ai": "ログ付き暗号化AI",
                 "feature-ai-desc": "フィルターなしの生成AIを提供します（開発中のため、誤りが発生する場合があります）。",
                 "feature-encryption": "🔐 ハイブリッド暗号化",
-                "feature-encryption-desc": "鍵交換にRSA-2048、メッセージ暗号化にAES-256を使用。ユーザーごとに二重キー。",
+                "feature-encryption-desc": "鍵交換にRSA-3072、メッセージ暗号化にAES-256を使用。ユーザーごとに二重キー。",
                 "feature-key-management": "🔑 キー管理",
                 "feature-key-management-desc": "暗号鍵をローカルで生成。秘密鍵はデバイスから出ません。",
                 "feature-qr": "安全なQRコード",
@@ -2210,7 +2210,7 @@
                 "logs-encryption": "AES-256暗号化",
                 "logs-backup": "ブラウザにサイトを保存して自動バックアップ",
                 "app-title": "Zenkari Secure",
-                "app-subtitle": "エンドツーエンド暗号化メッセージ RSA-2048 + AES-256",
+                "app-subtitle": "エンドツーエンド暗号化メッセージ RSA-3072 + AES-256",
                 "auth-mode": "ログイン",
                 "label-username": "ユーザー名",
                 "label-password": "パスワード",
@@ -2245,7 +2245,7 @@
                 "logout-btn": "- ログアウト",
                 "contact-title": "✉ お問い合わせ / サポート",
                 "footer-copyright": "© 2026 ZenkariApp - 著作権所有",
-                "footer-version": "バージョン9.6.1F - LE$TER制作",
+                "footer-version": "バージョン9.6.2F - LE$TER制作",
                 "label-contact-name": "連絡先名:",
                 "scan-qr-btn": "📷 QRスキャン",
                 "switch-camera-btn": "🔄 カメラ切り替え",
@@ -2284,7 +2284,7 @@
                 "feature-ai": "Verschlüsselte KI mit Protokollen",
                 "feature-ai-desc": "Stellt eine ungefilterte generative KI zur Verfügung (steht noch in der Entwicklung und kann Fehler machen).",
                 "feature-encryption": "🔐 Hybridverschlüsselung",
-                "feature-encryption-desc": "Verwendung von RSA-2048 für den Schlüsselaustausch und AES-256 für die Nachrichtenverschlüsselung. Doppelter Schlüssel pro Benutzer.",
+                "feature-encryption-desc": "Verwendung von RSA-3072 für den Schlüsselaustausch und AES-256 für die Nachrichtenverschlüsselung. Doppelter Schlüssel pro Benutzer.",
                 "feature-key-management": "🔑 Schlüsselverwaltung",
                 "feature-key-management-desc": "Lokale Generierung kryptografischer Schlüssel. Private Schlüssel verlassen niemals Ihr Gerät.",
                 "feature-qr": "Sichere QR-Codes",
@@ -2308,7 +2308,7 @@
                 "logs-encryption": "AES-256-Verschlüsselung",
                 "logs-backup": "Speichern Sie die Website im Browser für automatische Sicherung",
                 "app-title": "Zenkari Secure",
-                "app-subtitle": "Ende-zu-Ende-verschlüsselte Nachrichtenübermittlung RSA-2048 + AES-256",
+                "app-subtitle": "Ende-zu-Ende-verschlüsselte Nachrichtenübermittlung RSA-3072 + AES-256",
                 "auth-mode": "Anmelden",
                 "label-username": "Benutzername",
                 "label-password": "Passwort",
@@ -2343,7 +2343,7 @@
                 "logout-btn": " Abmelden",
                 "contact-title": "✉ Kontakt / Hilfe",
                 "footer-copyright": "© 2026 ZenkariApp – Alle Rechte vorbehalten",
-                "footer-version": "Version 9.6.1F - Erstellt von LE$TER",
+                "footer-version": "Version 9.6.2F - Erstellt von LE$TER",
                 "label-contact-name": "Kontaktname:",
                 "scan-qr-btn": "📷 QR scannen",
                 "switch-camera-btn": "🔄 Kamera wechseln",
@@ -2382,7 +2382,7 @@
                 "feature-ai": "IA crittografata con log",
                 "feature-ai-desc": "Fornisce un'IA generativa senza filtri (ancora in sviluppo e potrebbe commettere errori).",
                 "feature-encryption": "🔐 Crittografia ibrida",
-                "feature-encryption-desc": "Utilizzo di RSA-2048 per lo scambio di chiavi e AES-256 per la crittografia dei messaggi. Doppia chiave per utente.",
+                "feature-encryption-desc": "Utilizzo di RSA-3072 per lo scambio di chiavi e AES-256 per la crittografia dei messaggi. Doppia chiave per utente.",
                 "feature-key-management": "🔑 Gestione delle chiavi",
                 "feature-key-management-desc": "Generazione locale di chiavi crittografiche. Le chiavi private non lasciano mai il tuo dispositivo.",
                 "feature-qr": "Codici QR sicuri",
@@ -2406,7 +2406,7 @@
                 "logs-encryption": "Crittografia AES-256",
                 "logs-backup": "Salva il sito sul browser per il backup automatico",
                 "app-title": "Zenkari Secure",
-                "app-subtitle": "Messaggistica crittografata end-to-end RSA-2048 + AES-256",
+                "app-subtitle": "Messaggistica crittografata end-to-end RSA-3072 + AES-256",
                 "auth-mode": "Accesso",
                 "label-username": "Nome utente",
                 "label-password": "Password",
@@ -2441,7 +2441,7 @@
                 "logout-btn": " Esci",
                 "contact-title": "✉ Contatto / Aiuto",
                 "footer-copyright": "© 2026 ZenkariApp - Tutti i diritti riservati",
-                "footer-version": "Versione 9.6.1F - Realizzato da LE$TER",
+                "footer-version": "Versione 9.6.2F - Realizzato da LE$TER",
                 "label-contact-name": "Nome contatto:",
                 "scan-qr-btn": "📷 Scansiona QR",
                 "switch-camera-btn": "🔄 Cambia fotocamera",
@@ -2480,7 +2480,7 @@
                 "feature-ai": "AI được mã hóa kèm nhật ký",
                 "feature-ai-desc": "Cung cấp AI tạo sinh không lọc (vẫn đang phát triển và có thể mắc lỗi).",
                 "feature-encryption": "🔐 Mã hóa hỗn hợp",
-                "feature-encryption-desc": "Sử dụng RSA-2048 để trao đổi khóa và AES-256 để mã hóa tin nhắn. Hai khóa cho mỗi người dùng.",
+                "feature-encryption-desc": "Sử dụng RSA-3072 để trao đổi khóa và AES-256 để mã hóa tin nhắn. Hai khóa cho mỗi người dùng.",
                 "feature-key-management": "🔑 Quản lý khóa",
                 "feature-key-management-desc": "Tạo khóa mã hóa cục bộ. Khóa riêng tư không bao giờ rời khỏi thiết bị của bạn.",
                 "feature-qr": "Mã QR an toàn",
@@ -2504,7 +2504,7 @@
                 "logs-encryption": "Mã hóa AES-256",
                 "logs-backup": "Lưu trang web trong trình duyệt để sao lưu tự động",
                 "app-title": "Zenkari Secure",
-                "app-subtitle": "Tin nhắn mã hóa đầu cuối RSA-2048 + AES-256",
+                "app-subtitle": "Tin nhắn mã hóa đầu cuối RSA-3072 + AES-256",
                 "auth-mode": "Đăng nhập",
                 "label-username": "Tên người dùng",
                 "label-password": "Mật khẩu",
@@ -2539,7 +2539,7 @@
                 "logout-btn": "🚪 Đăng xuất",
                 "contact-title": "✉ Liên hệ / Trợ giúp",
                 "footer-copyright": "© 2026 ZenkariApp - Đã đăng ký bản quyền",
-                "footer-version": "Phiên bản 9.6.1F - Được tạo bởi LE$TER",
+                "footer-version": "Phiên bản 9.6.2F - Được tạo bởi LE$TER",
                 "label-contact-name": "Tên liên hệ:",
                 "scan-qr-btn": "📷 Quét QR",
                 "switch-camera-btn": "🔄 Chuyển camera",
@@ -2578,7 +2578,7 @@
                 "feature-ai": "로그 기록 기능이 있는 암호화된 AI",
                 "feature-ai-desc": "필터 없이 작동하는 생성형 AI를 제공합니다(개발 중이며 오류가 발생할 수 있음).",
                 "feature-encryption": "🔐 하이브리드 암호화",
-                "feature-encryption-desc": "키 교환에 RSA-2048을, 메시지 암호화에 AES-256을 사용합니다. 사용자당 이중 키 구조.",
+                "feature-encryption-desc": "키 교환에 RSA-3072을, 메시지 암호화에 AES-256을 사용합니다. 사용자당 이중 키 구조.",
                 "feature-key-management": "🔑 키 관리",
                 "feature-key-management-desc": "암호화 키를 로컬에서 생성합니다. 개인 키는 절대 사용자의 장치를 떠나지 않습니다.",
                 "feature-qr": "안전한 QR 코드",
@@ -2602,7 +2602,7 @@
                 "logs-encryption": "AES-256 암호화",
                 "logs-backup": "브라우저에 사이트를 저장하여 자동 백업",
                 "app-title": "Zenkari Secure",
-                "app-subtitle": "종단 간 암호화 메시징 RSA-2048 + AES-256",
+                "app-subtitle": "종단 간 암호화 메시징 RSA-3072 + AES-256",
                 "auth-mode": "로그인",
                 "label-username": "사용자 이름",
                 "label-password": "비밀번호",
@@ -2637,7 +2637,7 @@
                 "logout-btn": " 로그아웃",
                 "contact-title": "✉ 문의 / 도움말",
                 "footer-copyright": "© 2026 ZenkariApp - All rights reserved",
-                "footer-version": "버전 9.6.1F - LE$TER 제작",
+                "footer-version": "버전 9.6.2F - LE$TER 제작",
                 "label-contact-name": "연락처 이름:",
                 "scan-qr-btn": "📷 QR 스캔",
                 "switch-camera-btn": "🔄 카메라 전환",
@@ -2735,7 +2735,7 @@
                 "logout-btn": " Çıkış",
                 "contact-title": "✉ İletişim / Yardım",
                 "footer-copyright": "© 2026 ZenkariApp - Tüm hakları saklıdır",
-                "footer-version": "Sürüm 9.6.1F - LE$TER tarafından yapıldı",
+                "footer-version": "Sürüm 9.6.2F - LE$TER tarafından yapıldı",
                 "label-contact-name": "Kişi adı:",
                 "scan-qr-btn": "📷 QR Tara",
                 "switch-camera-btn": "🔄 Kamera değiştir",
@@ -2974,7 +2974,7 @@
                 showError('Ce nom d\'utilisateur est déjà utilisé');
                 return;
             }
-            showError('⚙️ Génération des clés RSA-2048...', false);
+            showError('⚙️ Génération des clés RSA-3072...', false);
             setTimeout(() => {
                 const authKeypair = generateKeypair();
                 const encryptKeypair = generateKeypair();
@@ -2994,7 +2994,7 @@
                 alert(`✅Account created!
                 👤 ${username}
                 🆔 ${userId}
-                🔑 Your RSA-2048 keys are ready.`);
+                🔑 Your RSA-3072 keys are ready.`);
                 loginUser(username);
             }, 1000);
         }
@@ -3127,8 +3127,8 @@
                 });
                 const signature = signer.sign(dataToSign, CryptoJS.SHA256, 'sha256');
                 const messageObj = {
-                    version: 'ZK9.6.1F',
-                    alg: 'RSA-2048-AES256',
+                    version: 'ZK9.6.2F',
+                    alg: 'RSA-3072-AES256',
                     encKey: encryptedKey,
                     ciphertext: ciphertext,
                     sender: currentUser.username,
@@ -3139,7 +3139,7 @@
                 const finalMessage = btoa(JSON.stringify(messageObj));
                 document.getElementById('outputMessage').value = finalMessage;
                 const securityInfo = useSecurityKey ? '\nProtection : Clé de sécurité activée' : '';
-                showStatus(`✅ Message chiffré\n🔐 RSA-2048 + AES-256\n📏 ${finalMessage.length} caractères${securityInfo}`, 'success');
+                showStatus(`✅ Message chiffré\n🔐 RSA-3072 + AES-256\n📏 ${finalMessage.length} caractères${securityInfo}`, 'success');
                 addToHistory({
                     type: 'encrypt',
                     recipient: recipient,
@@ -3369,7 +3369,7 @@
             if (!currentUser) return;
             const qrData = JSON.stringify({
                 app: 'ZenkariApp',
-                version: '9.6.1F',
+                version: '9.6.2F',
                 type: 'contact',
                 username: currentUser.username,
                 userId: currentUser.userId,

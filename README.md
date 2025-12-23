@@ -2,7 +2,7 @@
 
 ![ZenkariApp Logo](Zenkari.ico)
 
-**ZenkariApp** est une application de messagerie sécurisée avec chiffrement de bout en bout utilisant RSA-2048 et AES-256.
+**ZenkariApp** est une application de messagerie sécurisée avec chiffrement de bout en bout utilisant RSA-3072 et AES-256.
 
 ## 📋 Table des matières
 
@@ -17,7 +17,7 @@
 
 ## 🔧 Fonctionnalités
 
-✅ **Chiffrement de bout en bout** avec RSA-2048 + AES-256
+✅ **Chiffrement de bout en bout** avec RSA-3072 + AES-256
 ✅ **Signature numérique** des messages
 ✅ **Gestion des contacts** avec échange de clés publiques
 ✅ **Protection par clé de sécurité** optionnelle
@@ -30,7 +30,7 @@
 
 - **Frontend**: HTML5, CSS3, JavaScript
 - **Backend**: Python (Flask/Django )
-- **Chiffrement**: PyCryptodome (RSA-2048, AES-256, SHA-256)
+- **Chiffrement**: PyCryptodome (RSA-3072, AES-256, SHA-256)
 - **Base de données**: SQLite 
 - **QR Codes**: qrcode et Pillow
 
@@ -42,10 +42,5 @@
 - Node.js (pour le frontend si vous utilisez un framework JS)
 - pip (gestionnaire de paquets Python)
 
-### Étapes
-
-1. Cloner le dépôt :
-   ```bash
-   git clone https://github.com/votre-utilisateur/zenkari-app-web.git
-   cd zenkari-app-web
+###Télécharger le document en (.exe) (ZK9.6.2F.exe) pour utilisé le logiciel 
 

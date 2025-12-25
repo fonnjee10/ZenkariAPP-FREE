@@ -3,7 +3,7 @@ import { Readable } from 'stream';
 export default async function handler(req, res) {
     try {
         const response = await fetch(
-            "https://globular-camille-unblundering.ngrok-free.dev/v1/chat/completions",
+            "https://neutral-telecharger-protein-thumbnails.trycloudflare.com/v1/chat/completions",
             {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -45,3 +45,4 @@ export default async function handler(req, res) {
         res.status(500).json({ error: err.message });
     }
 }
+
